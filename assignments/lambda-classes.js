@@ -33,5 +33,27 @@ class Student extends Person{
         this.className = studentAttr.className;
         this.favSubjects = studentAttr.className;
     }
+    listsSubjects() {
+        console.log(this.favSubjects);
+    }
+    prAssignment(subject) {
+        console.log(`${student.name} has submitted a PR for ${subject}`);
+    }
+    sprintChallenge(subject) {
+        console.log(`${student.name} has begun sprint challenge on ${subject}`);
+    }
+}
 
+class ProjectManagers extends Instructor {
+    constructor(pmAttr){
+        super(pmAttr);
+        this.gradClassName = pmAttr.gradClassName;
+        this.favInstructor = pmAttr.favInstructor;
+    }
+    standUp(channel){
+        console.log(`${this.name} announces to ${channel}, @channel standy times!`);
+    }
+    debugsCode(){
+        console.log(`${this.name} debugs ${Student.name}'s code on ${this.subject}`)
+    }
 }
